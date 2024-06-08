@@ -38,12 +38,10 @@ nix profile install .
 }
 ```
 
-2. Add this to your overlays to expose gen to your pkgs:
+2. Add the overlay to expose gen to your pkgs:
 
 ```nix
-(final: prev: {
-  gen = inputs.gen.packages.${prev.system}.default;
-})
+overlays = [ inputs.gen.overlays.default ];
 ```
 
 3. Then you can either install it in your `environment.systemPackages` using:

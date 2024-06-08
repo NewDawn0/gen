@@ -16,13 +16,10 @@
           overlays = [ inputs.rust-overlay.overlays.default ];
         };
     in {
+      overlays.default =
+        (final: prev: { gen = self.packages.${prev.system}.default; });
       packages = eachSystem (system:
-        let
-          pkgs = mkPkgs system;
-          rustPlatform = pkgs.makeRustPlatform {
-            cargo = pkgs.rust-bin.stable.latest.minimal;
-            rustc = pkgs.rust-bin.stable.latest.minimal;
-          };
+        let pkgs = mkPkgs system;
         in {
           default = pkgs.rustPlatform.buildRustPackage {
             name = "gen";
