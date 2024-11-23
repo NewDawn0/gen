@@ -23,7 +23,7 @@
         in {
           default = pkgs.rustPlatform.buildRustPackage {
             name = "gen";
-            version = "0.0.1";
+            version = "1.0.0";
             cargoLock.lockFile = ./Cargo.lock;
             src = pkgs.lib.cleanSource ./.;
             meta = with pkgs.lib; {
