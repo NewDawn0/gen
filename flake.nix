@@ -22,14 +22,20 @@
         let pkgs = mkPkgs system;
         in {
           default = pkgs.rustPlatform.buildRustPackage {
-            name = "gen";
+            pname = "gen";
             version = "1.0.0";
-            cargoLock.lockFile = ./Cargo.lock;
-            src = pkgs.lib.cleanSource ./.;
-            meta = with pkgs.lib; {
-              description = "An extensible project generator";
-              maintainers = with maintainers; [ "NewDawn0" ];
-              license = licenses.mit;
+            src = ./.;
+            cargoHash = "sha256-tSWxKcKbiic+XfD/y51WSdim7T7cb34BSumv8i7m48Y=";
+            meta = {
+              description =
+                "A flexible tool for generating customizable project templates";
+              longDescription = ''
+                This extensible project generator allows you to quickly set up new projects with customizable templates.
+                Ideal for users who want to automate the creation of project skeletons with personalized settings.
+              '';
+              license = pkgs.lib.licenses.mit;
+              maintainers = with pkgs.lib.maintainers; [ NewDawn0 ];
+              platforms = pkgs.lib.platforms.all;
             };
           };
         });
