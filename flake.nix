@@ -25,7 +25,7 @@
             pname = "gen";
             version = "1.0.0";
             src = ./.;
-            cargoHash = "sha256-tSWxKcKbiic+XfD/y51WSdim7T7cb34BSumv8i7m48Y=";
+            cargoHash = "sha256-B+4jzreHXsAgE6noNzGajtKmJ1dLBN9E4q8ZRC9G6/0=";
             meta = {
               description =
                 "A flexible tool for generating customizable project templates";
