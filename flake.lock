@@ -17,57 +17,40 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1734293466,
-        "narHash": "sha256-QsGEeyUTirnLbl5dGd9JhZVX6h0ao0/2wgLgcnyOyZI=",
+        "lastModified": 1737253822,
+        "narHash": "sha256-yU7hu+fIUJa+YwPt7Y2rl2R+CuSIwxDESJqqccCEHz0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ce47474d72cf8b3b8bac3686a4e44846ee4bd950",
+        "rev": "a8815cdd42062c104459947067bd4a92c3ecbbd8",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1728538411,
-        "narHash": "sha256-f0SBJz1eZ2yOuKUr5CA9BHULGXVSn6miBuUWdTyhUhU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b69de56fac8c2b6f8fd27f2eca01dcda8e0a4221",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "nix-systems": "nix-systems",
-        "nixpkgs": "nixpkgs",
-        "rust-overlay": "rust-overlay"
+        "utils": "utils"
       }
     },
-    "rust-overlay": {
+    "utils": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nix-systems": "nix-systems",
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1734230139,
-        "narHash": "sha256-zsp0Mz8VgyIAnU8UhP/YT1g+zlsl+NIJTBMAbY+RifQ=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "150fbc8aa2bc501041810bbc1dbfe73694a861be",
+        "lastModified": 1741859931,
+        "narHash": "sha256-uczIcE/HyAJWwTy7FxxSL29NyDfOaayIXqsC9u09reA=",
+        "owner": "NewDawn0",
+        "repo": "nixUtils",
+        "rev": "d0563a63ba088fb4378f25ba1c050aed338aea99",
         "type": "github"
       },
       "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
+        "owner": "NewDawn0",
+        "repo": "nixUtils",
         "type": "github"
       }
     }
